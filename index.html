@@ -2,8 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>زيد و نك و بدل جسمك – خطة HASNITAMA لمدة 8 أسابيع</title>
+  <title>إرسال إثبات الدفع – خطة HASNITAMA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     :root {
       --primary: #FF7F11;
@@ -11,60 +12,43 @@
       --white: #FFFFFF;
       --bg-dark: #050505;
       --text-muted: #b3b3b3;
-      --radius: 16px;
+      --radius: 14px;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
       background: var(--bg-dark);
       color: var(--white);
-      line-height: 1.7;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      line-height: 1.75;
     }
 
     .container {
       width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
+      max-width: 800px;
       padding: 0 1.5rem;
+      margin: 0 auto;
     }
 
     header {
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #111;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(0,0,0,0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #111;
-      padding: 0.7rem 0;
     }
 
     .header-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      align-items: center;
     }
 
     .logo {
@@ -74,1071 +58,266 @@
     }
 
     .logo-mark {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       border: 2px solid var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
+      color: var(--primary);
       font-size: 0.85rem;
-      color: var(--primary);
-    }
-
-    .logo-text {
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .tagline {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .header-offer {
-      text-align: left;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .header-offer strong {
-      color: var(--primary);
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 0.65rem 1.6rem;
-      border: none;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 700;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: var(--black);
-      box-shadow: 0 10px 25px rgba(255,127,17,0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 32px rgba(255,127,17,0.55);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--primary);
-      border: 1px solid var(--primary);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255,127,17,0.12);
-    }
-
-    main {
-      flex: 1;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 2.5rem 0 3rem;
-      background:
-        radial-gradient(circle at top right, rgba(255,127,17,0.17), transparent 55%),
-        linear-gradient(to bottom, #050505, #050505);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .eyebrow {
-      font-size: 0.8rem;
-      color: var(--primary);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
-    }
-
-    .hero-title {
-      font-size: clamp(1.9rem, 4vw, 2.5rem);
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-title span {
-      color: var(--primary);
-    }
-
-    .hero-subtitle {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      margin-bottom: 1.1rem;
-    }
-
-    .hero-list {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-list li {
-      margin-bottom: 0.35rem;
-      position: relative;
-      padding-right: 1.2rem;
-    }
-
-    .hero-list li::before {
-      content: "✓";
-      position: absolute;
-      right: 0;
-      top: 0;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-      margin-bottom: 0.6rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-note strong {
-      color: var(--primary);
-    }
-
-    .hero-guarantee {
-      margin-top: 0.7rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .hero-guarantee span {
-      color: #21d38b;
-      font-weight: 600;
-    }
-
-    .hero-offer-box {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #111;
-      border-radius: 999px;
-      border: 1px solid #333;
-      padding: 0.4rem 0.9rem;
-      font-size: 0.8rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .price-old {
-      text-decoration: line-through;
-      color: #ff3b3b;
-      font-weight: 700;
-    }
-
-    .price-new {
-      color: var(--primary);
-      font-weight: 900;
-      font-size: 1rem;
-    }
-
-    .hero-cover-card {
-      background: linear-gradient(135deg, #0b0b0b, #151515);
-      border-radius: 20px;
-      border: 1px solid #333;
-      padding: 1rem;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.7);
-    }
-
-    .hero-cover-head {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-cover-img {
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid #444;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-cover-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-cover-meta strong {
-      color: var(--white);
-    }
-
-    /* LIMITED-TIME OFFER SECTION (DAN KENNEDY STYLE) */
-    .limited-offer {
-      padding: 2.2rem 0;
-      background: linear-gradient(135deg, #140a00, #050505);
-      border-top: 1px solid #111;
-      border-bottom: 1px solid #111;
     }
 
     .offer-box {
-      text-align: center;
       background: #111;
-      padding: 2rem 1.75rem;
-      border-radius: 20px;
       border: 1px solid #333;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.65);
-    }
-
-    .offer-badge {
-      display: inline-block;
-      background: var(--primary);
-      color: var(--black);
-      padding: 0.35rem 1.1rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 0.9rem;
-    }
-
-    .offer-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 0.7rem;
-    }
-
-    .offer-title .old-price {
-      text-decoration: line-through;
-      color: #ff4b4b;
-      font-weight: 700;
-    }
-
-    .offer-title .new-price {
-      color: var(--primary);
-      font-weight: 900;
-      font-size: 1.9rem;
-    }
-
-    .offer-subtitle {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 1.1rem;
-    }
-
-    .offer-days {
-      font-size: 0.9rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .offer-days strong {
-      color: var(--primary);
-    }
-
-    .offer-timer {
-      background: rgba(255,127,17,0.12);
-      border: 1px solid rgba(255,127,17,0.4);
-      padding: 0.7rem 1rem;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 1.3rem;
-    }
-
-    .offer-btn {
-      font-size: 1rem;
-      padding: 0.9rem 2.4rem;
-    }
-
-    .offer-guarantee {
-      margin-top: 1rem;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    .offer-guarantee strong {
-      color: var(--primary);
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 2.6rem 0;
-      border-top: 1px solid #111;
-    }
-
-    .section-title {
-      font-size: 1.45rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .section-sub {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      margin-bottom: 1.6rem;
-      max-width: 650px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 1.9rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3,minmax(0,1fr));
-      gap: 1.25rem;
-    }
-
-    .card {
-      background: #101010;
-      border-radius: var(--radius);
-      border: 1px solid #222;
-      padding: 1.3rem;
-      font-size: 0.9rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255,127,17,0.14), transparent 65%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .card p {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    .list-check {
-      list-style: none;
-    }
-
-    .list-check li {
-      padding-right: 1.4rem;
-      position: relative;
-      margin-bottom: 0.4rem;
-      font-size: 0.9rem;
-    }
-
-    .list-check li::before {
-      content: "✓";
-      position: absolute;
-      right: 0;
-      top: 0;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.25rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid #333;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .story-img {
       border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid #333;
-      margin-bottom: 0.75rem;
+      padding: 1.7rem;
+      margin-bottom: 1.8rem;
+      line-height: 1.9;
     }
 
-    /* VALUE STACK */
-    .value-stack {
-      background: #0b0b0b;
-      border-radius: 22px;
-      border: 1px solid #222;
-      padding: 1.8rem 1.5rem;
-    }
-
-    .value-rows {
-      display: grid;
-      gap: 0.6rem;
-      margin-top: 0.9rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .value-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .value-row span:first-child {
-      color: var(--text-muted);
-    }
-
-    .value-row span:last-child {
+    .offer-box h2 {
       color: var(--primary);
-      font-weight: 600;
-    }
-
-    .value-total {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
       text-align: center;
-      font-size: 0.9rem;
-      margin-bottom: 0.9rem;
     }
 
-    .value-total strong {
+    .offer-price {
+      background: rgba(255,127,17,0.15);
+      border: 1px solid rgba(255,127,17,0.35);
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      text-align: center;
       color: var(--primary);
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .steps-box {
+      background: #111;
+      border: 1px solid #222;
+      padding: 1.7rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+    }
+
+    .steps-box h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+      text-align: center;
       font-size: 1.1rem;
     }
 
-    .value-price-line {
+    .payment-method {
+      background: #0d0d0d;
+      border: 1px solid #333;
+      padding: 1.4rem;
+      border-radius: 14px;
+      margin-bottom: 1.2rem;
       text-align: center;
-      font-size: 0.95rem;
-      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
     }
 
-    .value-price-line .old-price {
-      text-decoration: line-through;
-      color: #ff4b4b;
-      font-weight: 700;
-    }
-
-    .value-price-line .new-price {
+    .payment-method span {
       color: var(--primary);
-      font-weight: 900;
-      font-size: 1.4rem;
-    }
-
-    /* TESTIMONIALS */
-    .testimonials {
-      background: radial-gradient(circle at center, rgba(255,127,17,0.06), transparent 65%);
-    }
-
-    .testimonial {
-      background: #0e0e0e;
-      border-radius: var(--radius);
-      border: 1px solid #222;
-      padding: 1.1rem;
-      font-size: 0.86rem;
-    }
-
-    .testimonial .quote {
-      margin-bottom: 0.6rem;
-    }
-
-    .quote-mark {
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin-left: 0.25rem;
-    }
-
-    .testimonial-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .testimonial-role {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    /* FAQ */
-    .faq-item {
-      border-bottom: 1px solid #151515;
-      padding: 0.7rem 0;
-    }
-
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      gap: 0.6rem;
-    }
-
-    .faq-toggle {
-      color: var(--primary);
-      font-size: 1.2rem;
-    }
-
-    .faq-a {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
-      display: none;
-    }
-
-    .faq-item.open .faq-a {
+      font-weight: bold;
+      font-size: 1.3rem;
       display: block;
+      margin-top: 0.4rem;
     }
 
-    /* FINAL CTA */
-    .final-cta {
-      text-align: center;
+    form {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 1.7rem;
+      margin-bottom: 2rem;
     }
 
-    .final-cta p {
+    .form-row {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #050505;
+      border: 1px solid #333;
+      border-radius: 12px;
+      color: var(--white);
+      outline: none;
       font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 0.9rem;
     }
 
-    /* STICKY CTA MOBILE */
-    .sticky-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 0.7rem 1rem;
-      background: rgba(0,0,0,0.97);
-      border-top: 1px solid #222;
+    .btn {
+      background: var(--primary);
+      color: var(--black);
+      padding: 1rem;
+      border: none;
+      border-radius: 999px;
+      width: 100%;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      box-shadow: 0 10px 25px rgba(255,127,17,0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    #status {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      padding: 0.8rem;
+      border-radius: 12px;
       display: none;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.6rem;
-      z-index: 60;
-    }
-
-    .sticky-cta span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .sticky-cta strong {
-      color: var(--primary);
     }
 
     footer {
-      border-top: 1px solid #111;
-      padding: 1rem 0 1.4rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
       text-align: center;
-    }
-
-    /* ANIMATIONS */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        position: static;
-      }
-
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero {
-        padding-top: 1.8rem;
-      }
-
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-box {
-        padding: 1.7rem 1.2rem;
-      }
-
-      .sticky-cta {
-        display: flex;
-      }
+      padding: 1.3rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid #111;
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
   </style>
 </head>
+
 <body>
-  <div class="page">
-    <!-- HEADER -->
-    <header>
-      <div class="container header-inner">
-        <div class="logo">
-          <div class="logo-mark">H</div>
-          <div>
-            <div class="logo-text">Coach HASNITAMA</div>
-            <div class="tagline">خطة 8 أسابيع للنحيفين و النحيفات</div>
-          </div>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="logo-mark">H</div>
+        <div>
+          <strong>Coach HASNITAMA</strong>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">إرسال إثبات الدفع</div>
         </div>
-        <div class="header-offer">
-          <div>السعر العادي: <strong>3500 دج</strong></div>
-          <div>عرض خاص: <strong>1500 دج فقط</strong> لأيام الثلاثاء، الأربعاء، السبت</div>
-        </div>
-        <a href="payment.html" class="btn btn-primary">نعم، نحب نستغل العرض الآن</a>
       </div>
-    </header>
-
-    <main>
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="fade-in">
-            <div class="eyebrow">عرض خاص للنحيفين و النحيفات في الجزائر</div>
-            <h1 class="hero-title">
-              <span>زيد و نك و بدل جسمك</span><br />
-              خطة عملية من 8 أسابيع باش تزيد وزنك و تبدّل شكل جسمك… بدون تعقيد
-            </h1>
-            <p class="hero-subtitle">
-              Ebook رقمي من Coach HASNITAMA مبني على تجارب حقيقية مع شباب و بنات نحاف:
-              تاكل أكل جزائري بسيط، تتّبع خطة تمارين واضحة، و تشوف جسمك يتبدّل أسبوع بعد أسبوع.
-            </p>
-
-            <div class="hero-offer-box">
-              <span>السعر العادي:</span>
-              <span class="price-old">3500 دج</span>
-              <span>اليوم:</span>
-              <span class="price-new">1500 دج فقط</span>
-            </div>
-
-            <ul class="hero-list">
-              <li>خطة أكل جاهزة 8 أسابيع بمنتجات متوفرة في أي ولاية.</li>
-              <li>تمارين للبيت و للجيم… للرجال و للنساء.</li>
-              <li>جداول قياس، متابعة، و نصائح باش ما تضيعش في الطريق.</li>
-            </ul>
-
-            <div class="hero-cta">
-              <a href="payment.html" class="btn btn-primary">إشري الكتاب الآن بـ 1500 دج</a>
-              <button class="btn btn-outline" id="scrollWhy">لماذا هذا الكتاب مختلف؟</button>
-            </div>
-
-            <div class="hero-note">
-              بعد الدفع عبر <strong>BaridiMob</strong> أو <strong>CCP</strong>، راح تنتقل مباشرة لصفحة  
-              <strong>إرسال إثبات الدفع</strong> باش توصلك نسخة PDF في أقرب وقت.
-            </div>
-
-            <div class="hero-guarantee">
-              <span>ضمان صريح:</span>
-              إذا طبّقت بصدق و ما شفت حتى نتيجة، تواصل معايا و نعدّل لك الخطة حتى يبان التغيير.
-            </div>
-          </div>
-
-          <div class="hero-cover-card fade-in">
-            <div class="hero-cover-head">📘 نسخة رقمية فورية</div>
-            <div class="hero-cover-img">
-              <!-- ضع غلاف كتابك هنا -->
-              <!-- مثال: غيّر اسم الملف حسب صورتك -->
-              <img src="ebook-cover.jpg" alt="غلاف كتاب زيد و نك و بدل جسمك" />
-            </div>
-            <div class="hero-cover-meta">
-              <strong>العنوان:</strong> زيد و نك و بدل جسمك – خطة HASNITAMA لمدة 8 أسابيع<br />
-              <strong>الصيغة:</strong> PDF قابل للتحميل على الهاتف أو الكمبيوتر<br />
-              <strong>لمن:</strong> رجال و نساء نحاف – مبتدئين و متوسطين
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- LIMITED OFFER -->
-      <section class="limited-offer">
-        <div class="container">
-          <div class="offer-box fade-in" id="offerBox">
-            <div class="offer-badge">عرض خاص لأيام محدودة</div>
-            <h2 class="offer-title">
-              من <span class="old-price">3500 دج</span>  
-              إلى <span class="new-price">1500 دج</span> فقط
-            </h2>
-            <p class="offer-subtitle">
-              هذا ليس تخفيض عادي… هذا قرار باش نخلي أكبر عدد من النحاف يجربوا الخطة،
-              لذلك خفضت السعر أكثر من النصف لفترة قصيرة.
-            </p>
-            <p class="offer-days">
-              العرض صالح فقط لأيام: <strong>الثلاثاء – الأربعاء – السبت</strong>  
-              وبعدها يرجع السعر إلى <strong>3500 دج</strong> بدون استثناء.
-            </p>
-            <div class="offer-timer" id="offerTimer">
-              ⏰ الوقت راهو يجري… أحسن وقت باش تبدأ هو الآن، قبل ما تقفل نافذة العرض.
-            </div>
-            <a href="payment.html" class="btn btn-primary offer-btn">
-              نعم، نحب نستغل عرض 1500 دج قبل ما يطيح 🔥
-            </a>
-            <div class="offer-guarantee">
-              <strong>ملاحظة صريحة:</strong> السعر المنخفض هذا معمول باش يعطيك دفعة تبدأ الآن،
-              مش باش تبقى تأجل لأسبوع الجاي و اللي بعده.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHY THIS EBOOK -->
-      <section id="why">
-        <div class="container fade-in">
-          <h2 class="section-title">علاش هذا الكتاب مختلف على أي “دايت” جربته من قبل؟</h2>
-          <p class="section-sub">
-            أغلب النصائح للنحاف في الإنترنت معمولة لناس عايشين في دول أخرى، بأكل و مكملات غالية.
-            هذا الكتاب مبني خصيصًا على الواقع الجزائري: أكل متوفر، ميزانية معقولة، و عقلية بسيطة
-            تقدر تطبقها حتى لو ما عندك حتى خبرة في التمرين.
-          </p>
-          <div class="grid-2">
-            <div class="card">
-              <h3>🧠 خطة واضحة… بدون حوسة</h3>
-              <p>
-                ما تحتاجش تفهم كل شي في التغذية و كمال الأجسام.  
-                كل أسبوع عندك: ماذا تاكل؟ متى تاكل؟ كيف تتمرن؟  
-                كل شيء مكتوب خطوة بخطوة، بدون تعقيد.
-              </p>
-            </div>
-            <div class="card">
-              <h3>🍛 أكل جزائري حقيقي</h3>
-              <p>
-                رز، بطاطا، عدس، حمص، بيض، لبن، زيت زيتون…  
-                مكاينش أكل غالي و لا مكونات ما تلقاهاش في الحومة تاعك.
-                الخطة مبنية على الواقع، مش على الخيال.
-              </p>
-            </div>
-            <div class="card">
-              <h3>🏋️ تمارين للبيت و للجيم</h3>
-              <p>
-                إذا ما تقدرش تروح للقاعة، عندك برنامج منزلي واضح.  
-                وإذا تتمرن في الجيم، عندك برنامج مفصل لحركات البناء
-                للصدر، الأكتاف، الظهر، الرجلين، و المؤخرة.
-              </p>
-            </div>
-            <div class="card">
-              <h3>📊 تتبّع منضّم باش تشوف التطور</h3>
-              <p>
-                جداول قياس وزن، صور كل أسبوعين، قياس محيط الخصر و الورك.  
-                تشوف التغيير بعينيك، ماشي غير بالاحساس.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- STORY / AUTHORITY -->
-      <section>
-        <div class="container fade-in">
-          <h2 class="section-title">من هو Coach HASNITAMA و علاش تسمع له؟</h2>
-          <div class="grid-2">
-            <div>
-              <div class="story-img">
-                <!-- صورة لك أنت -->
-                <img src="coach.jpeg" alt="Coach HASNITAMA" />
-              </div>
-              <p style="font-size:0.9rem;color:var(--text-muted);">
-                أنا حسني، Coach HASNITAMA. خدمت مع عشرات الشباب و البنات اللي كانو يعانوا من النحافة،
-                كثير منهم زادوا من 4 حتى 8 كيلو في أسابيع قليلة، و الأهم: تبدّل شكل جسمهم و ثقتهم.
-              </p>
-              <p style="font-size:0.9rem;color:var(--text-muted);margin-top:0.6rem;">
-                شفت نفس الأخطاء تتكرر:  
-                يأكل عشوائي، يتمرن بلا برنامج، يمل بعد أسبوع… و يرجع لنفس النقطة.  
-                لذلك قررت نلم كل شيء في خطة واحدة واضحة، و خرج هذا الكتاب.
-              </p>
-            </div>
-            <div>
-              <div class="pill">🎯 رسالة صريحة مني ليك</div>
-              <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:0.7rem;">
-                يمكن جربت تزيد وزنك قبل و ما نجحش. يمكن سمعت كلام “كل بزاف وخلاص”.
-                الحقيقة: مشكلتك ماشي في شهوة الأكل… المشكل في <strong>الخطة</strong>.
-              </p>
-              <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:0.7rem;">
-                لما تعطي لجسمك الكمية الصحيحة من الأكل، في التوقيت الصحيح، مع تمارين صح،
-                النتيجة تولي مسألة وقت فقط.  
-                هذا الكتاب يعطيك بالضبط هذه الخطة، بلا لف و لا دوران.
-              </p>
-              <p style="font-size:0.9rem;color:var(--text-muted);">
-                ما نعدكش أنك تولي لاعب كمال أجسام في شهرين،  
-                لكن نعدك إذا التزمت، راح تشوف فرق واضح في الميزان و في المراية.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- VALUE STACK / WHAT YOU GET -->
-      <section>
-        <div class="container fade-in">
-          <h2 class="section-title">ماذا ستحصل بالضبط بعد الشراء؟</h2>
-          <p class="section-sub">
-            مباشرة بعد ما ترسل إثبات الدفع، راح توصلك نسخة PDF للكتاب + كل الملاحق
-            اللي تساعدك تطبق الخطة خطوة بخطوة.
-          </p>
-          <div class="grid-2">
-            <div class="value-stack">
-              <h3 style="font-size:1.05rem;">داخل الكتاب و الملاحق:</h3>
-              <div class="value-rows">
-                <div class="value-row">
-                  <span>خطة الأكل 8 أسابيع (رجال + نساء)</span>
-                  <span>قيمة: 2000 دج</span>
-                </div>
-                <div class="value-row">
-                  <span>برنامج التمرين للجيم</span>
-                  <span>قيمة: 1500 دج</span>
-                </div>
-                <div class="value-row">
-                  <span>برنامج التمرين المنزلي بدون آلات معقدة</span>
-                  <span>قيمة: 1500 دج</span>
-                </div>
-                <div class="value-row">
-                  <span>جداول قياس و متابعة جاهزة للطباعة</span>
-                  <span>قيمة: 800 دج</span>
-                </div>
-                <div class="value-row">
-                  <span>دليل الأخطاء الشائعة للنحاف و كيف تتجنبها</span>
-                  <span>قيمة: 700 دج</span>
-                </div>
-                <div class="value-row">
-                  <span>إرشادات النوم، الاسترجاع، و تنظيم اليوم</span>
-                  <span>قيمة: 500 دج</span>
-                </div>
-              </div>
-              <div class="value-total">
-                القيمة الإجمالية التقريبية لكل ما داخل الكتاب:  
-                <strong>7000 دج+</strong>
-              </div>
-              <div class="value-price-line">
-                لكن اليوم، في عرض 3 أيام فقط:  
-                من <span class="old-price">3500 دج</span>  
-                إلى <span class="new-price">1500 دج</span> فقط
-              </div>
-              <a href="payment.html" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">
-                نعم، أريد كل هذا الآن بـ 1500 دج
-              </a>
-            </div>
-
-            <div>
-              <h3 style="font-size:1.05rem;margin-bottom:0.6rem;">باختصار، بعد 8 أسابيع من التطبيق:</h3>
-              <ul class="list-check">
-                <li>وزنك يزيد بطريقة صحية بدل ما تبقى ثابت لسنوات.</li>
-                <li>شكل جسمك يتبدّل: صدر، أكتاف، فخذين، و مؤخرة أوضح.</li>
-                <li>لباسك يولي يبان أرتب و أمتل، بدون “هزالة”.</li>
-                <li>تتعلم كيف تحافظ على الوزن الجديد، ماشي تزيد و تهبط.</li>
-                <li>تربح ثقة جديدة في المراية و الصور، بدون فلتر.</li>
-              </ul>
-              <p style="font-size:0.88rem;color:var(--text-muted);margin-top:0.9rem;">
-                هذا استثمار مرة واحدة، لكن تأثيره يبقى معاك طول حياتك،
-                لأنك تفهم أخيرًا كيف يخدم جسمك و كيف تغذيه باش يكبر.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section class="testimonials">
-        <div class="container fade-in">
-          <h2 class="section-title">بعض من تحوّلات الناس اللي خدموا مع طريقة HASNITAMA</h2>
-          <p class="section-sub">
-            هذي مجرد أمثلة. حط هنا لاحقًا صور قبل/بعد و شهادات من متابعينك و زبائنك.
-          </p>
-          <div class="grid-3">
-            <div class="testimonial">
-              <div class="quote">
-                <span class="quote-mark">“</span>
-                في 6 أسابيع زدت 5 كغ، و الأكتاف و الصدر بانوا مليح.  
-                حسّيت روحي أخيرًا راجل في اللباس.
-              </div>
-              <div class="testimonial-name">ياسين – وهران</div>
-              <div class="testimonial-role">من 58 كغ إلى 63 كغ في أقل من شهرين</div>
-            </div>
-            <div class="testimonial">
-              <div class="quote">
-                <span class="quote-mark">“</span>
-                برنامج الأكل سهل و واضح. ما كنتش نجوع،
-                بالعكس حسّيت بالطاقة و شكلي تبدّل خصوصًا في الفخذين و المؤخرة.
-              </div>
-              <div class="testimonial-name">سارة – الجزائر العاصمة</div>
-              <div class="testimonial-role">زيادة وزن أنثوي بدون كرش</div>
-            </div>
-            <div class="testimonial">
-              <div class="quote">
-                <span class="quote-mark">“</span>
-                أكثر شيء عجبني أن كل شيء منظم: أكل، تمرين، و متابعة.
-                ما بقاش عندي عذر نهار نجي نكسل.
-              </div>
-              <div class="testimonial-name">محمد – قسنطينة</div>
-              <div class="testimonial-role">زيادة قوة و كتلة عضلية ملحوظة</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section>
-        <div class="container fade-in">
-          <h2 class="section-title">أسئلة متكررة</h2>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <span>كيف نستلم الكتاب بعد ما ندفع؟</span>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-a">
-              بعد الدفع عبر BaridiMob أو CCP، تنتقل لصفحة
-              <strong>إرسال إثبات الدفع</strong>، تكمّل النموذج و ترفع Screenshot.
-              بعدها خلال ساعات نرسل لك رابط تحميل الكتاب على واتساب أو الإيميل.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <span>هل يكفي الكتاب وحده؟ ولا لازم كوتشينغ كامل؟</span>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-a">
-              هذا الكتاب معمول باش يكون <strong>خطة كاملة لـ 8 أسابيع</strong> تكفيك باش تبدأ و تشوف نتائج.
-              إذا حاب متابعة شخصية و تعديل أسبوعي، تلقى طريقة الانضمام للكوتشينغ الشهري في آخر الكتاب.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <span>أنا مبتدئ/ة تمامًا، ما نعرف والو على التمرين… هل يناسبني؟</span>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-a">
-              نعم، البرنامج موجه أولاً للمبتدئين.  
-              كل التمارين مكتوبة بأسمائها بالإنجليزية، و تقدر تبحث عليها في YouTube قبل ما تطبقها.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <span>ما نقدرش نروح للجيم، هل يوجد برنامج منزلي؟</span>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-a">
-              أكيد. داخل الكتاب برنامج خاص للبيت للرجال و للنساء،
-              بأدوات بسيطة جدًا، تقدر تبدأ بيه من اليوم.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <span>كم من الوقت يلزمني باش نشوف أول نتيجة؟</span>
-              <span class="faq-toggle">+</span>
-            </div>
-            <div class="faq-a">
-              أغلب الناس يلاحظوا فرق في الطاقة و الشهية خلال أول أسبوعين،
-              و فرق في الوزن و الشكل بعد 4 إلى 8 أسابيع من الالتزام.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FINAL CTA -->
-      <section class="final-cta">
-        <div class="container fade-in">
-          <p>
-            إذا قرأت لهنا، فهذا يعني أنك جاد/ة في تغيير جسمك.  
-            السؤال الوحيد اللي يبقى: هل تخلي هذا اليوم يمرّ كيما أمس؟
-          </p>
-          <a href="payment.html" class="btn btn-primary">
-            نعم، أريد بدء خطة 8 أسابيع الآن بـ 1500 دج فقط 💪
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <!-- STICKY CTA MOBILE -->
-    <div class="sticky-cta">
-      <span>خطة 8 أسابيع لزيادة الوزن – <strong>1500 دج فقط</strong></span>
-      <a href="payment.html" class="btn btn-primary" style="padding:0.5rem 1.2rem;font-size:0.78rem;">
-        إشري الآن
-      </a>
     </div>
+  </header>
 
-    <footer>
-      © <span id="year"></span> Coach HASNITAMA – Toujours en plein énergie ⚡
-    </footer>
-  </div>
+  <main>
+    <div class="container">
+
+      <!-- URGENCY + OFFER -->
+      <div class="offer-box">
+        <h2>🔥 عرض 3 أيام فقط – من 3500 دج إلى 1500 دج</h2>
+        <div class="offer-price">
+          العرض صالح فقط: الثلاثاء – الأربعاء – السبت
+        </div>
+        <p style="color:var(--text-muted); text-align:center;">
+          هذا التخفيض غير متكرر — الهدف أن تبدأ اليوم بلا تأجيل.
+        </p>
+      </div>
+
+      <!-- PAYMENT INSTRUCTIONS -->
+      <div class="steps-box">
+        <h3> خطوات الدفع</h3>
+
+        <div class="payment-method">
+          BaridiMob  
+          <span>00799999002587476952</span>
+        </div>
+
+        <div class="payment-method">
+          CCP  
+          <span>69  00258747 </span>
+        </div>
+
+        <p style="color:var(--text-muted); margin-top:1rem;">
+          ✔ ادفع 1500 دج  
+          ✔ خذ Screenshot لعملية الدفع  
+          ✔ املأ معلوماتك أسفل ثم اضغط على زر WhatsApp  
+          ✔ أرسل لي Screenshot مباشرة  
+        </p>
+      </div>
+
+      <!-- FORM -->
+      <form id="paymentForm">
+
+        <div class="form-row">
+          <label>الاسم و اللقب</label>
+          <input id="fullName" placeholder="مثال: أحمد بن يوسف" required />
+        </div>
+
+        <div class="form-row">
+          <label>رقم الهاتف (واتساب)</label>
+          <input id="phone" placeholder="06XXXXXXXX" required />
+        </div>
+
+        <div class="form-row">
+          <label>البريد الإلكتروني (اختياري)</label>
+          <input id="email" placeholder="example@mail.com" />
+        </div>
+
+        <button class="btn" type="submit">إرسال المعلومات عبر WhatsApp</button>
+
+        <div id="status"></div>
+
+      </form>
+
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Coach HASNITAMA — Toujours en plein énergie ⚡
+  </footer>
 
   <script>
-    // السنة الحالية
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // زر سكرول "لماذا هذا الكتاب مختلف؟"
-    document.getElementById('scrollWhy').addEventListener('click', function () {
-      const sec = document.getElementById('why');
-      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
-    });
+    const form = document.getElementById("paymentForm");
+    const statusDiv = document.getElementById("status");
 
-    // FAQ toggle
-    document.querySelectorAll('.faq-item').forEach(function (item) {
-      const q = item.querySelector('.faq-q');
-      const toggle = item.querySelector('.faq-toggle');
-      q.addEventListener('click', function () {
-        item.classList.toggle('open');
-        toggle.textContent = item.classList.contains('open') ? '−' : '+';
-      });
-    });
+    function showStatus(msg, type) {
+      statusDiv.style.display = "block";
+      statusDiv.innerHTML = msg;
+      statusDiv.style.background = type === "error" ? "#240707" : "#102216";
+      statusDiv.style.border = type === "error" ? "1px solid #7a1c1c" : "1px solid #1a5f31";
+      statusDiv.style.color = type === "error" ? "#ffb3b3" : "#7ff5a4";
+    }
 
-    // Fade-in on scroll
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-      },
-      { threshold: 0.15 }
-    );
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-    // Simple dynamic message for offer days (Tuesday=2, Wednesday=3, Saturday=6)
-    (function () {
-      const offerTimer = document.getElementById('offerTimer');
-      if (!offerTimer) return;
+      const name = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
 
-      const today = new Date();
-      const day = today.getDay(); // 0=Sunday, 1=Mon, 2=Tue...
-
-      const isOfferDay = (day === 2 || day === 3 || day === 6);
-
-      if (isOfferDay) {
-        offerTimer.textContent = '⏰ اليوم واحد من أيام العرض (الثلاثاء/الأربعاء/السبت) – استغل سعر 1500 دج قبل ما يرجع 3500 دج!';
-      } else {
-        offerTimer.textContent = '⏰ الآن خارج أيام العرض… إذا حاب تستغل سعر 1500 دج حضّر نفسك لواحد من الأيام: الثلاثاء، الأربعاء، أو السبت.';
+      if (!name || !phone) {
+        showStatus("❌ يرجى إدخال الاسم و رقم الهاتف.", "error");
+        return;
       }
-    })();
+
+      const wa = "https://wa.me/213559947488?text=" +
+        encodeURIComponent(
+          "السلام عليكم كوتش 🌟\n\n" +
+          "أرسلت لك معلوماتي لإثبات الدفع:\n\n" +
+          "👤 الاسم: " + name + "\n" +
+          "📞 الهاتف: " + phone + "\n" +
+          (email ? "📧 الإيميل: " + email + "\n" : "") +
+          "\n📸 سوف أرسل لك الآن Screenshot لإثبات الدفع.\n" +
+          "أريد الحصول على كتاب: زيد و زنك و بدل جسمك 💪🔥"
+        );
+
+      window.location.href = wa;
+    });
   </script>
+
 </body>
 </html>
